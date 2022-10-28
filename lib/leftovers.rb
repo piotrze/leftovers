@@ -93,7 +93,7 @@ module Leftovers # rubocop:disable Metrics/ModuleLength
     def leftovers
       @leftovers ||= begin
         collector.collect
-        collector.definitions.reject(&:in_collection?)
+        collector.definitions.reject(&:in_collection?).select(&:any?)
       end
     end
 

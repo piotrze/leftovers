@@ -37,5 +37,9 @@ module Leftovers
     def in_test_collection?
       @definitions.any?(&:in_test_collection?)
     end
+
+    def any?
+      @definitions.any?
+    end
   end
 end
